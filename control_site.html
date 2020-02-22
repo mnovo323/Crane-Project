@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width", initial-scale=1.0, user-scalable="no"/>
+        <meta charset="utf-8"/>
+        <style>
+            html, body{
+                margin:0;
+                height:100%;
+            }
+            #header{
+                color:white;
+                background-color:#63aed4;
+                font-size:6vw;
+                font-weight:bold;
+                font-family:Arial, Helvetica, sans-serif;
+                height: 10vw;
+                text-align:center;
+                vertical-align:middle;
+                LINE-HEIGHT:10vw;
+            }
+            #body{
+                position:relative;
+                margin-top:30vh;
+                padding-bottom:4rem;
+            }
+            #footer{
+                position:absolute;
+                bottom:0;
+                width:100%;
+                height:4rem;
+                background-color:#4d4d4d;
+                color:#c7c7c7;
+                font-family:Verdana, Geneva, sans-serif;
+                vertical-align:middle;
+                line-height:4rem;
+                font-size:.7rem;
+            }
+            #left-buttons{
+                vertical-align:top;
+                display:inline-block;
+                font-family:'Courier New', Courier, monospace;
+                max-width:50%;
+            }
+            #right-buttons{
+                display:inline-block;
+                font-family:'Courier New', Courier, monospace;
+                max-width:50%;
+                margin-left:20px;
+            }
+            #button-container{
+                position:absolute;
+                top:0px;
+                left:0px;
+                align-items:center;
+                display:inline-block;
+                width:100%;
+            }
+            button{
+                width:5vh;
+                height:5vh;
+                color:white;
+                text-align:center;
+                vertical-align:middle;
+                font-size:4vh;
+                background-color:#63aed4;
+                text-decoration:none;
+                border:none;
+                border-radius:10px;
+                margin:4px;
+                padding:0px;
+                padding-bottom:12px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div align="center" style="position:relative;min-height:100vh;">
+        <div id="header">
+            Rebellious Pigs Crane Controller
+        </div>
+        <div id="body">
+            <div id="button-container">
+            <div id="left-buttons">
+                <h3>
+                    Jib Controls
+                </h3>
+                <button id="left">&#8592;</button>
+                <button id="right">&#8594;</button>
+            </div>
+            <div id="right-buttons">
+                <h3>
+                    Boom Controls
+                </h3>
+                <button style="display:block;" id="up">&#8593;</button>
+                <button style="display:block;" id="down">&#8595;</button>
+
+            </div>
+            </div>
+        </div>
+        <div id="footer">
+            Webpage design by Michael Novotny
+        </div>
+        </div>
+    </body>
+</html>
+<script>
+    document.getElementById("left").addEventListener("pointerdown", function(){
+        document.getElementById("left").style.backgroundColor = "#4a80c7";
+        //send message to set motor pwm
+    });
+    document.getElementById("left").addEventListener("pointerup", function(){
+        document.getElementById("left").style.backgroundColor = "#63aed4";
+        //send message to set motor pwm
+    });
+    document.getElementById("right").addEventListener("pointerdown", function(){
+        document.getElementById("right").style.backgroundColor = "#4a80c7";
+        //send message to set motor pwm
+    });
+    document.getElementById("right").addEventListener("pointerup", function(){
+        document.getElementById("right").style.backgroundColor = "#63aed4";
+        //send message to set motor pwm
+    });
+    document.getElementById("up").addEventListener("pointerdown", function(){
+        document.getElementById("up").style.backgroundColor = "#4a80c7";
+        //send message to set motor pwm
+    });
+    document.getElementById("up").addEventListener("pointerup", function(){
+        document.getElementById("up").style.backgroundColor = "#63aed4";
+        //send message to set motor pwm
+    });
+    document.getElementById("down").addEventListener("pointerdown", function(){
+        document.getElementById("down").style.backgroundColor = "#4a80c7";
+        //send message to set motor pwm
+    });
+    document.getElementById("down").addEventListener("pointerup", function(){
+        document.getElementById("down").style.backgroundColor = "#63aed4";
+        //send message to set motor pwm
+    });
+</script>
